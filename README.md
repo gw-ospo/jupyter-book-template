@@ -39,3 +39,10 @@ Build book as PDF (see "example-book/_build/latex/book.pdf):
 ```sh
 jupyter-book build example-book/ --builder pdflatex
 ```
+
+Build book as HTML: (see "example-book/_build/html/index.html"):
+
+```sh
+#jupyter-book build example-book/
+jupyter-book build example-book/ --builder html
+```
