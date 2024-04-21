@@ -21,6 +21,7 @@ The following command was used to create the structure for this book:
 
 ```sh
 jupyter-book create example-book
+#jupyter-book create --cookiecutter example-book
 ```
 
 ### Building
@@ -46,3 +47,9 @@ Build book as HTML: (see "example-book/_build/html/index.html"):
 #jupyter-book build example-book/
 jupyter-book build example-book/ --builder html
 ```
+
+### Deployment
+
+Configure GitHub Pages to deploy from "GitHub Actions" source.
+
+Then add the action (see ".github/workflows/deploy-book.yml") and commit and push.
