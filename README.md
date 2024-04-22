@@ -4,7 +4,7 @@ This repository demonstrates a working implementation of [Jupyter Book](https://
 
 ## Setup
 
-Make a copy of this repository template. Then clone your repository onto your local computer, and navigate there from the command line.
+[Make a copy](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) of this repository template. Then clone your copy of the repository onto your local computer, and navigate there from the command line.
 
 Setup virtual environment:
 
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ### Initialization
 
-The following command was used to create the structure for this book:
+The following command was used to create the structure for this book (where "example-book" was chosen as the name of the book):
 
 ```sh
 jupyter-book create example-book
@@ -32,12 +32,7 @@ jupyter-book create example-book
 #jupyter-book create --cookiecutter example-book
 ```
 
-### Content
-
-Update the book's contents. Commit and push to trigger an automated build.
-
 ### Building
-
 
 Build book as LaTeX (see "example-book/_build/latex"):
 
@@ -60,8 +55,8 @@ jupyter-book build example-book/ --builder html
 
 ### Deployment
 
-Configure GitHub Pages to deploy from "GitHub Actions" source.
+Configure GitHub Pages for your repository to deploy from "GitHub Actions" source.
 
-The [".github/workflows/deploy-book.yml"](/.github/workflows/deploy-book.yml) file controls the build process.
+FYI - the [".github/workflows/deploy-book.yml"](/.github/workflows/deploy-book.yml) file controls the build process. If you use your own book name, customize "example-book" to refer to the book name you chose.
 
 Commit and push to trigger an automated build of your HTML site. Visit the hosted site at your repository's GitHub Pages URL.
