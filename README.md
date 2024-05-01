@@ -1,5 +1,7 @@
 # jupyter-book-example
 
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 This repository demonstrates a working implementation of [Jupyter Book](https://jupyterbook.org/), hosted on GitHub Pages, with automated deployments setup via GitHub Actions.
 
 For more context about this process, or if you would like to start from scratch to setup your own book, consult the official [Jupyter Book Tutorial](https://jupyterbook.org/en/stable/start/your-first-book.html).
