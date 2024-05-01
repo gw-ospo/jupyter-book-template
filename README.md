@@ -44,6 +44,12 @@ jupyter-book create example-book
 
 If you have created a copy of this repository, you won't need to repeat this initialization step.
 
+### Customization
+
+There are a number of opportunities to customize the book configuration via the ["_config.yml" file](/example-book/_config.yml) (for example, updating the logo). The sidebar navigation can be customized via the "_toc.yml" file. See [Jupyter Book Configuration Reference](https://jupyterbook.org/customize/config.html) for more details.
+
+Also customize the content for your book, adding new markdown and notebook files to your book directory, as desired.
+
 ### Building
 
 > NOTE: the commands below assume your book is named "example-book", however if you choose a different book name, you'll need to update the commands accordingly
@@ -74,4 +80,4 @@ The workflow file ["deploy-book.yml"](/.github/workflows/deploy-book.yml) contro
 
 In your GitHub repository's settings, under the "pages" settings, configure GitHub Pages, specifically choosing to deploy from "GitHub Actions" source.
 
-Commit and push to trigger an automated build of your HTML site. Visit the hosted site at your repository's GitHub Pages URL. you can find the hosted site URL from your GitHub Pages settings, once the site has been deployed! It should resemble the format
+Commit and push to trigger an automated build of your HTML site. Visit the hosted site at your repository's GitHub Pages URL. you can find the hosted site URL from your GitHub Pages settings, once the site has been deployed! It should resemble the format "https://USERNAME.github.io/REPONAME/".
