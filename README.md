@@ -46,7 +46,7 @@ If you have created a copy of this repository, you won't need to repeat this ini
 
 ### Customizing
 
-There are a number of opportunities to customize the book configuration via the ["_config.yml" file](/example-book/_config.yml) (for example, updating the logo). The sidebar navigation can be customized via the "_toc.yml" file. See [Jupyter Book Configuration Reference](https://jupyterbook.org/customize/config.html) for more details.
+There are a number of opportunities to customize the book configuration via the ["_config.yml" file](/example-book/_config.yml) (for example, updating the logo). The sidebar navigation can be customized via the ["_toc.yml" file](/example-book/_toc.yml). See the [Jupyter Book Configuration Reference](https://jupyterbook.org/customize/config.html) for more details.
 
 Also customize the content for your book, adding new markdown and notebook files to your book directory, as desired.
 
@@ -76,8 +76,8 @@ jupyter-book build example-book/ --builder html
 
 We want to [publish a GitHub Pages site using a GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). See also the [Jupyter Book GitHub Pages Guide](https://jupyterbook.org/en/stable/publish/gh-pages.html).
 
-The workflow file ["deploy-book.yml"](/.github/workflows/deploy-book.yml) controls the build process, and has been created for you already. If you use your own book name, customize "example-book" in this file to refer to the book name you chose (see lines 15, 48, and 54).
+The ["deploy-book.yml" workflow file](/.github/workflows/deploy-book.yml) controls the build process, and has been created for you already. If you use your own book name, customize "example-book" in this file to refer to the book name you chose (see lines 15, 48, and 54).
 
 In your GitHub repository's settings, under the "pages" settings, configure GitHub Pages, specifically choosing to deploy from "GitHub Actions" source.
 
-Commit and push to trigger an automated build of your HTML site. Visit the hosted site at your repository's GitHub Pages URL. you can find the hosted site URL from your GitHub Pages settings, once the site has been deployed! It should resemble the format "https://USERNAME.github.io/REPONAME/".
+Commit and push to trigger an automated build of your HTML site. Visit the hosted site at your repository's GitHub Pages URL. You can find the hosted site URL from your GitHub Pages settings, once the site has been deployed! It should resemble the format `https://USERNAME.github.io/REPO_NAME`.
