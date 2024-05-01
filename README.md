@@ -34,7 +34,7 @@ pip install jupyter-book
 
 ## Managing the Book
 
-### Initialization
+### Initializing
 
 FYI - the following command was used to create the structure for this book (where "example-book" was chosen as the name of the book):
 
@@ -44,7 +44,7 @@ jupyter-book create example-book
 
 If you have created a copy of this repository, you won't need to repeat this initialization step.
 
-### Customization
+### Customizing
 
 There are a number of opportunities to customize the book configuration via the ["_config.yml" file](/example-book/_config.yml) (for example, updating the logo). The sidebar navigation can be customized via the "_toc.yml" file. See [Jupyter Book Configuration Reference](https://jupyterbook.org/customize/config.html) for more details.
 
@@ -72,7 +72,7 @@ Build book as HTML: (see "example-book/_build/html/index.html"):
 jupyter-book build example-book/ --builder html
 ```
 
-### Deployment
+### Deploying
 
 We want to [publish a GitHub Pages site using a GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). See also the [Jupyter Book GitHub Pages Guide](https://jupyterbook.org/en/stable/publish/gh-pages.html).
 
