@@ -25,7 +25,7 @@ conda activate jbook-env
 [Install the Jupyter Book Package](https://jupyterbook.org/en/stable/start/overview.html#install-jupyter-book), for example via pip:
 
 ```sh
-# install just the jupyer book package into your environment:
+# install just the jupyter book package into your environment:
 pip install jupyter-book
 
 # consider alternatively leveraging the requirements file:
