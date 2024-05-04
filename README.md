@@ -28,10 +28,10 @@ conda activate jbook-env
 
 ```sh
 # install just the jupyter book package into your environment:
-pip install jupyter-book
+#pip install jupyter-book
 
 # consider alternatively leveraging the requirements file:
-#pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Managing the Book
@@ -51,6 +51,8 @@ If you have created a copy of this repository, you won't need to repeat this ini
 There are a number of opportunities to customize the book configuration via the ["_config.yml" file](/example-book/_config.yml) (for example, updating the logo). The sidebar navigation can be customized via the ["_toc.yml" file](/example-book/_toc.yml). See the [Jupyter Book Configuration Reference](https://jupyterbook.org/customize/config.html) for more details.
 
 Also customize the content for your book, adding new markdown and notebook files to your book directory, as desired.
+
+If you are including IPYNB notebooks in your book, and if these notebooks use any third-party Python packages, you must update the ["requirements.txt" file](/requirements.txt) to include the names of those packages.
 
 ### Building
 
