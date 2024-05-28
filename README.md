@@ -10,9 +10,15 @@ Otherwise, if you'd like to build on top of this template repository, follow the
 
 ## Setup
 
-[Make a copy](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) of this template repository.
+### Repo Setup
 
-> NOTE: the GitHub Actions build for your new repository may be failing initially, until you configure GitHub Actions (see "Deploying" section below)
+[Make a copy](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) of this template repository by clicking "Use this template" > "Create a new repository" from the green button on the top right of the template repository homepage on GitHub.
+
+There is also a one-time setup step to get your GitHub Actions build to pass and get your site hosted. In your GitHub repository's settings, under the "pages" settings, configure GitHub Pages, specifically choosing to deploy from "GitHub Actions" source. For more details, see the "Deploying" section below.
+
+> NOTE: the GitHub Actions build for your new repository may be failing initially, until you configure GitHub Pages. It's OK. You can always return to configure GitHub Pages when you are ready to host your site.
+
+### Local Setup
 
 Clone your copy of the repository onto your local computer, and navigate there from the command line.
 
@@ -76,12 +82,12 @@ Build book as HTML: (see "example-book/_build/html/index.html"):
 jupyter-book build example-book/ --builder html
 ```
 
-### Deploying
+## Deploying
 
 We want to [publish a GitHub Pages site using a GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). See also the [Jupyter Book GitHub Pages Guide](https://jupyterbook.org/en/stable/publish/gh-pages.html).
 
 The ["deploy-book.yml" workflow file](/.github/workflows/deploy-book.yml) controls the build process, and has been created for you already. If you use your own book name, customize "example-book" in this file to refer to the book name you chose (see lines 15, 48, and 54).
 
-In your GitHub repository's settings, under the "pages" settings, configure GitHub Pages, specifically choosing to deploy from "GitHub Actions" source.
+By following the "Repo Setup" section above, you will have configured your repository to be hosted on GitHub Pages.
 
 Commit and push to trigger an automated build of your HTML site. Visit the hosted site at your repository's GitHub Pages URL. You can find the hosted site URL from your GitHub Pages settings, once the site has been deployed! It should resemble the format `https://USERNAME.github.io/REPO_NAME`.
