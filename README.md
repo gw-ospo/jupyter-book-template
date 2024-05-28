@@ -82,7 +82,13 @@ Build book as HTML: (see "docs/_build/html/index.html"):
 jupyter-book build docs/ --builder html
 ```
 
-## Deploying
+Clearing the cache, as necessary:
+
+```sh
+jupyter-book clean docs/ --all
+```
+
+### Deploying
 
 We want to [publish a GitHub Pages site using a GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). See also the [Jupyter Book GitHub Pages Guide](https://jupyterbook.org/en/stable/publish/gh-pages.html).
 
