@@ -44,17 +44,17 @@ pip install -r requirements.txt
 
 ### Initializing
 
-FYI - the following command was used to create the structure for this book (where "example-book" was chosen as the name of the book):
+FYI - the following command was used to create the structure for this book (where "docs" was chosen as the name of the book):
 
 ```sh
-jupyter-book create example-book
+jupyter-book create docs
 ```
 
 If you have created a copy of this repository, you won't need to repeat this initialization step.
 
 ### Customizing
 
-There are a number of opportunities to customize the book configuration via the ["_config.yml" file](/example-book/_config.yml) (for example, updating the logo). The sidebar navigation can be customized via the ["_toc.yml" file](/example-book/_toc.yml). See the [Jupyter Book Configuration Reference](https://jupyterbook.org/customize/config.html) for more details.
+There are a number of opportunities to customize the book configuration via the ["_config.yml" file](/docs/_config.yml) (for example, updating the logo). The sidebar navigation can be customized via the ["_toc.yml" file](/docs/_toc.yml). See the [Jupyter Book Configuration Reference](https://jupyterbook.org/customize/config.html) for more details.
 
 Also customize the content for your book, adding new markdown and notebook files to your book directory, as desired.
 
@@ -62,31 +62,37 @@ If you are including IPYNB notebooks in your book, and if these notebooks use an
 
 ### Building
 
-> NOTE: the commands below assume your book is named "example-book", however if you choose a different book name, you'll need to update the commands accordingly
+> NOTE: the commands below assume your book is named "docs", however if you choose a different book name, you'll need to update the commands accordingly
 
-Build book as LaTeX (see "example-book/_build/latex"):
-
-```sh
-jupyter-book build example-book/ --builder latex
-```
-
-Build book as PDF (see "example-book/_build/latex/book.pdf"):
+Build book as LaTeX (see "docs/_build/latex"):
 
 ```sh
-jupyter-book build example-book/ --builder pdflatex
+jupyter-book build docs/ --builder latex
 ```
 
-Build book as HTML: (see "example-book/_build/html/index.html"):
+Build book as PDF (see "docs/_build/latex/book.pdf"):
 
 ```sh
-jupyter-book build example-book/ --builder html
+jupyter-book build docs/ --builder pdflatex
 ```
 
-## Deploying
+Build book as HTML: (see "docs/_build/html/index.html"):
+
+```sh
+jupyter-book build docs/ --builder html
+```
+
+Clearing the cache, as necessary:
+
+```sh
+jupyter-book clean docs/ --all
+```
+
+### Deploying
 
 We want to [publish a GitHub Pages site using a GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). See also the [Jupyter Book GitHub Pages Guide](https://jupyterbook.org/en/stable/publish/gh-pages.html).
 
-The ["deploy-book.yml" workflow file](/.github/workflows/deploy-book.yml) controls the build process, and has been created for you already. If you use your own book name, customize "example-book" in this file to refer to the book name you chose (see lines 15, 48, and 54).
+The ["deploy-book.yml" workflow file](/.github/workflows/deploy-book.yml) controls the build process, and has been created for you already. If you use your own book name, customize "docs" in this file to refer to the book name you chose (see lines 15, 60, and 66).
 
 By following the "Repo Setup" section above, you will have configured your repository to be hosted on GitHub Pages.
 
